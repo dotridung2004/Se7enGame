@@ -2995,6 +2995,14 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.19947411
       objectReference: {fileID: 0}
+    - target: {fileID: 3838369347074108412, guid: f3059fe87515fa740afe2ac7e9819671, type: 3}
+      propertyPath: m_Size.z
+      value: 0.8945851
+      objectReference: {fileID: 0}
+    - target: {fileID: 3838369347074108412, guid: f3059fe87515fa740afe2ac7e9819671, type: 3}
+      propertyPath: m_Center.z
+      value: -0.052707464
+      objectReference: {fileID: 0}
     - target: {fileID: 3840249287301114925, guid: f3059fe87515fa740afe2ac7e9819671, type: 3}
       propertyPath: confettiPoint
       value: 
@@ -3009,15 +3017,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817674853816217528, guid: f3059fe87515fa740afe2ac7e9819671, type: 3}
       propertyPath: m_Size.z
-      value: 1.0833471
+      value: 0.5461378
       objectReference: {fileID: 0}
     - target: {fileID: 7817674853816217528, guid: f3059fe87515fa740afe2ac7e9819671, type: 3}
       propertyPath: m_Center.x
-      value: -2.0101828e-16
+      value: -4.654082e-16
       objectReference: {fileID: 0}
     - target: {fileID: 7817674853816217528, guid: f3059fe87515fa740afe2ac7e9819671, type: 3}
       propertyPath: m_Center.z
-      value: -0.26414534
+      value: -0.53275007
       objectReference: {fileID: 0}
     - target: {fileID: 7817674854150330680, guid: f3059fe87515fa740afe2ac7e9819671, type: 3}
       propertyPath: m_Size.z

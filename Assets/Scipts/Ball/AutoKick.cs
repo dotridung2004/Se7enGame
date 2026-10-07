@@ -5,9 +5,20 @@ public class AutoKickButton : MonoBehaviour
 {
     [SerializeField] private Button btnAutoKick;
     [SerializeField] private Transform player;
+
     void Start()
     {
         btnAutoKick.onClick.AddListener(AutoKick);
+    }
+
+    private void Update()
+    {
+        if(AllBallsScored())
+        {
+            btnAutoKick.gameObject.SetActive(false);
+            return;
+        }
+        btnAutoKick.gameObject.SetActive(true);
     }
 
     private void OnDestroy()
@@ -24,6 +35,24 @@ public class AutoKickButton : MonoBehaviour
         }
         farthestBall.Kick();
     }
+
+    private bool AllBallsScored()
+    {
+        BallKick[] balls = FindObjectsByType<BallKick>(FindObjectsSortMode.None);
+        if (balls.Length == 0)
+        {
+            return false;
+        }
+        foreach(BallKick ball in balls)
+        {
+            if (!ball.hasScored)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     private BallKick GetFarthestBall()
     {
         BallKick[] balls = FindObjectsByType<BallKick>(FindObjectsSortMode.None);
@@ -31,6 +60,10 @@ public class AutoKickButton : MonoBehaviour
         float maxSqrDistance = 0f;
         foreach (BallKick ball in balls)
         {
+            if (!ball.CanKick)
+            {
+                continue;
+            }
             float sqrDistance = (ball.transform.position - player.position).sqrMagnitude;
             if (sqrDistance > maxSqrDistance)
             {

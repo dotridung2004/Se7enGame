@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 135134225773752490}
   - component: {fileID: 6126739048952083054}
   - component: {fileID: -1094914268473225257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Soccer Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -174,8 +174,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   ballSpeed: 10
+  upwardSpeed: 2
   rb: {fileID: 5684654248279024441}
   cameraReturnDelay: 2
+  stopThreshold: 0.2
+  maxFlyTime: 8
+  settleDelayAfterGoal: 1
 --- !u!1 &8673761490852533399
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4584139707326083087}
   - component: {fileID: 3981643107694825104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TriggerZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
